@@ -1,6 +1,6 @@
 # *COWPAY FLUTTER PLUGIN*
 
-This document is a guide to the example project included in the plugin files. In addition, following the below steps will help you learn how to add and use (eKYC plugin) in your flutter application.
+This document is a guide to the example project included in the plugin files. In addition, following the below steps will help you learn how to add and use (Cowpay plugin) in your flutter application.
 
 
 ## REQUIREMENTS

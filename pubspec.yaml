@@ -2,6 +2,7 @@ name: cowpay
 description: Cowpay is a payment gateway plugin.
 version: 0.0.1
 homepage: https://cowpay.me/
+publish_to:
 
 environment:
   sdk: '>=3.0.6 <4.0.0'
