@@ -1,4 +1,3 @@
-
 import '../domain_models.dart';
 
 class PaymentSuccessModel {

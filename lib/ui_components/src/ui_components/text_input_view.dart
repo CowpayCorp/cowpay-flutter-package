@@ -135,7 +135,6 @@ class AppTextField extends StatelessWidget {
                 enabledBorderThickness: enabledBorderThickness,
                 errorBorderColor: AppColors.errorColor,
                 errorBorderThickness: errorBorderThickness,
-
               ),
               cursorColor: AppColors.primary,
               textInputAction: textInputAction ?? TextInputAction.next,

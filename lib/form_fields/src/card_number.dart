@@ -1,4 +1,3 @@
-
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 
@@ -15,7 +14,7 @@ class CardNumber extends Equatable {
 
   static Either<ValidationFailure, CardNumberData> _validateOtpCode(
       String value) {
-    String newValue=value.replaceAll('-', ' ');
+    String newValue = value.replaceAll('-', ' ');
     final isNumber = RegExp(r"^((?:[0-9]+ ?){4,})$").hasMatch(newValue);
     if (isNumber) {
       String trimedValue = newValue.replaceAll(" ", '');

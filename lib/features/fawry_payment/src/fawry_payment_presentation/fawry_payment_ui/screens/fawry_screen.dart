@@ -120,7 +120,7 @@ class FawryScreen extends StatelessWidget {
                   if (state.failure == null) {
                     return const FawryWidget();
                   }
-                  return SizedBox();
+                  return const SizedBox();
                 }),
           ),
         ));

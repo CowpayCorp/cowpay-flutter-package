@@ -229,10 +229,12 @@ class _Form extends StatelessWidget {
                           lable: context.localization("cardHolderName"),
                           prefixIconPath: AppAssets.holderName),
                       onChange: (value) {
-                        context.read<AddCardBloc>().add(CardHolderNameChanged(value));
+                        context
+                            .read<AddCardBloc>()
+                            .add(CardHolderNameChanged(value));
                       },
-                      validator: (string) => state.cardHolderName?.value
-                          .fold((l) => context.localization(l.message!), (r) => null),
+                      validator: (string) => state.cardHolderName?.value.fold(
+                          (l) => context.localization(l.message!), (r) => null),
                     );
                   }),
               BlocBuilder<AddCardBloc, AddCardState>(
@@ -247,10 +249,12 @@ class _Form extends StatelessWidget {
                           prefixIconPath: AppAssets.cardIcon),
                       textInputType: TextInputType.number,
                       onChange: (value) {
-                        context.read<AddCardBloc>().add(CardNumberChanged(value));
+                        context
+                            .read<AddCardBloc>()
+                            .add(CardNumberChanged(value));
                       },
-                      validator: (string) => state.cardNumber?.value
-                          .fold((l) => context.localization(l.message!), (r) => null),
+                      validator: (string) => state.cardNumber?.value.fold(
+                          (l) => context.localization(l.message!), (r) => null),
                     );
                   }),
               SizedBox(
@@ -266,7 +270,8 @@ class _Form extends StatelessWidget {
                             return const AppTextField().buildMainFormTextField(
                               maxLength: 5,
                               formatters: expiryFormatters,
-                              textInputType: const TextInputType.numberWithOptions(),
+                              textInputType:
+                                  const TextInputType.numberWithOptions(),
                               fieldData: FieldData(
                                   lable: context.localization("expiryDate"),
                                   hint: 'MM/YY',
@@ -276,9 +281,9 @@ class _Form extends StatelessWidget {
                                     .read<AddCardBloc>()
                                     .add(CardExpirationChanged(value));
                               },
-                              validator: (string) => state.cardExpiry?.value.fold(
-                                  (l) => context.localization(l.message!),
-                                  (r) => null),
+                              validator: (string) => state.cardExpiry?.value
+                                  .fold((l) => context.localization(l.message!),
+                                      (r) => null),
                             );
                           }),
                     ),
@@ -317,8 +322,8 @@ class _Form extends StatelessWidget {
                           context.localization(
                             "saveThisCardInformationForFasterPayment",
                           ),
-                          style: TextStyles.bodyTextStyle
-                              .copyWith(fontSize: 12.sp, color: AppColors.black)),
+                          style: TextStyles.bodyTextStyle.copyWith(
+                              fontSize: 12.sp, color: AppColors.black)),
                     ),
                   ),
                   BlocBuilder<AddCardBloc, AddCardState>(
@@ -333,8 +338,10 @@ class _Form extends StatelessWidget {
                                 .add(IsTokenizedChanged(value));
                           },
                           activeColor: AppColors.primary,
-                          inactiveThumbColor: AppColors.primary.withOpacity(0.5),
-                          inactiveTrackColor: AppColors.primary.withOpacity(0.3),
+                          inactiveThumbColor:
+                              AppColors.primary.withOpacity(0.5),
+                          inactiveTrackColor:
+                              AppColors.primary.withOpacity(0.3),
                         );
                       })
                 ],
@@ -349,14 +356,14 @@ class _Form extends StatelessWidget {
                       isFeesOnCustomer: GlobalVariables().isfeesOnCustomer,
                     );
                   }),
-
             ],
           ),
           Column(
             children: [
               BlocBuilder<AddCardBloc, AddCardState>(
                 buildWhen: (previous, current) =>
-                    previous.submitButtonIsLoading != current.submitButtonIsLoading ||
+                    previous.submitButtonIsLoading !=
+                        current.submitButtonIsLoading ||
                     previous.cardExpiry != current.cardExpiry ||
                     previous.cardCvv != current.cardCvv ||
                     previous.cardNumber != current.cardNumber ||

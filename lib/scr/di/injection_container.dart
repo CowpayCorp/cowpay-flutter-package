@@ -1,4 +1,3 @@
-
 import 'package:get_it/get_it.dart';
 
 import '../../features/card_payment/card_payment.dart';

@@ -1,5 +1,3 @@
-
-
 import '../../../../../core/packages/dartz/dartz.dart';
 import '../../../../../domain_models/domain_models.dart';
 import '../../../../../failures/failures.dart';
@@ -12,11 +10,11 @@ class CardPaymentRepositoryImpl implements CardPaymentRepository {
   CardPaymentRepositoryImpl({required this.remoteDataSource});
 
   @override
-  Future<Either<Failure, CowpayResponseModel<List<TokenizedCardDetails>>>> getUserCardsCall(
-      {required GetUserCardsRequestModel requestModel}) async {
+  Future<Either<Failure, CowpayResponseModel<List<TokenizedCardDetails>>>>
+      getUserCardsCall({required GetUserCardsRequestModel requestModel}) async {
     try {
       final cardsList =
-      await remoteDataSource.getUserCardsCall(requestModel: requestModel);
+          await remoteDataSource.getUserCardsCall(requestModel: requestModel);
       return Right(cardsList);
     } on Exception catch (error) {
       return Left(FailureHandler(error).getExceptionFailure());

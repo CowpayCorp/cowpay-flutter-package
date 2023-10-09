@@ -1,4 +1,4 @@
-# *COWPAY FLUTTER PLUGIN*
+# *COWPAY FLUTTER PACKAGE*
 
 This document is a guide to the example project included in the plugin files. In addition, following the below steps will help you learn how to add and use (Cowpay plugin) in your flutter application.
 

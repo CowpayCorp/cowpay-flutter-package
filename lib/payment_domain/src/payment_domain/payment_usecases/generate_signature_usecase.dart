@@ -3,8 +3,6 @@ import 'dart:convert';
 import '../../../../core/core.dart';
 import 'package:crypto/crypto.dart';
 
-
-
 class GenerateSignatureUseCase
     implements UseCase<String, GenerateSignatureUseCaseParams> {
   GenerateSignatureUseCase();

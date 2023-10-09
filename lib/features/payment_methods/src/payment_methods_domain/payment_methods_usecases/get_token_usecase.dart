@@ -1,4 +1,3 @@
-
 import 'package:dartz/dartz.dart';
 
 import '../../../../../core/core.dart';
@@ -8,16 +7,14 @@ import '../payment_methods_repositories/payment_methods_repository.dart';
 
 class GetTokenUseCase
     implements
-        UseCase<Future<Either<Failure, String?>>,
-            GetTokenUseCaseParams> {
+        UseCase<Future<Either<Failure, String?>>, GetTokenUseCaseParams> {
   final PaymentMethodsRepository repository;
 
   GetTokenUseCase({required this.repository});
 
   @override
-  Future<Either<Failure, String?>> call(
-      GetTokenUseCaseParams params) async {
-    Either<Failure, /*CowpayResponseModel<*/String/*>*/> token =
+  Future<Either<Failure, String?>> call(GetTokenUseCaseParams params) async {
+    Either<Failure, /*CowpayResponseModel<*/ String /*>*/ > token =
         await repository.getTokenCall(
       requestModel: GetTokenRequestModel(
         clientId: params.clientId,

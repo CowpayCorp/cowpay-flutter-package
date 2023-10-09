@@ -1,4 +1,3 @@
-
 import 'package:get_it/get_it.dart';
 
 import '../payment_methods_data/payment_methods_datasources/payment_methods_datasource.dart';

@@ -1,4 +1,3 @@
-
 import '../../localization/src/localization.dart';
 
 class FontFamily {

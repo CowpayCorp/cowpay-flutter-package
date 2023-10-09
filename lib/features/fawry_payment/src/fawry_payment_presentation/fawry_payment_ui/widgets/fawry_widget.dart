@@ -102,7 +102,7 @@ class FawryWidget extends StatelessWidget {
       ],
     );
   }
-
+/*
   Widget _buildHeader({required String imagePath}) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 0.05.sw),
@@ -137,4 +137,5 @@ class FawryWidget extends StatelessWidget {
       ),
     );
   }
+  */
 }

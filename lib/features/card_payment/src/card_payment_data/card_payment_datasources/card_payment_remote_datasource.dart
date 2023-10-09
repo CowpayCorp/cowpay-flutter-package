@@ -1,5 +1,3 @@
-
-
 import '../../../../../domain_models/domain_models.dart';
 import '../../../../../network/src/network.dart';
 import '../car_payment_models/get_user_cards_request_call/get_user_cards_request.dart';
@@ -24,7 +22,9 @@ class CardPaymentRemoteDataSourceImpl implements CardPaymentRemoteDataSource {
         (list) {
           List<Map<String, dynamic>> responseList =
               list.cast<Map<String, dynamic>>();
-          return responseList.map((i) => TokenizedCardDetails.fromJson(i)).toList();
+          return responseList
+              .map((i) => TokenizedCardDetails.fromJson(i))
+              .toList();
         },
       ),
     );

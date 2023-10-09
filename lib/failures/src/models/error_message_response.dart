@@ -1,4 +1,3 @@
-
 import '../../../network/network.dart';
 
 class ErrorMessageResponse extends ResponseModel {
